@@ -1,0 +1,97 @@
+/* PADRONIZAÇÃO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+/* COR DE FUNDO E FONTE */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dedede;
+}
+
+/* HEADER */
+
+.header-page {
+    display: flex;
+    border-bottom: 1px solid rgba(146, 146, 146, 0.215);
+    padding: 2.5rem 2rem;
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 4rem;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.header-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-brand img {
+    height: 2.5rem;
+}
+
+.header-icon-email {
+    background-color: #0B64F4;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.header-brand h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.header-subtitle {
+    font-size: 1.7rem;
+    text-align: center;
+    color: #5C6F8A;
+}
+
+.page-theme {
+    display: flex;
+    justify-content: space-between;
+    background-color: #d7d7d7;
+    padding: .3rem .3rem;
+    border: 1px solid rgba(0, 0, 0, 0.200);
+    border-radius: 2rem;
+    width: 8rem;
+}
+
+.page-theme img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.theme-icon-sol {
+    background-color: #0B64F4;
+    border-radius: 50%;
+    padding: .3rem;
+}
+
+.theme-icon-sol, .theme-icon-lua {
+    display: flex;
+    align-items: center;
+}
