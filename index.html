@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Controle de Emails</title>
 </head>
 
@@ -14,24 +15,64 @@
             <div class="header-content">
                 <div class="header-brand">
                     <div class="header-icon-email">
-                        <img src="imgs/icone-email.png" alt="" aria-hidden="true">
+                        <img src="imgs/header/icone-email.png" alt="" aria-hidden="true">
                     </div>
                     <h1>Controle de Emails</h1>
-                    <img src="imgs/icone-escudo.png" alt="" aria-hidden="true">
+                    <img src="imgs/header/icone-escudo.png" alt="" aria-hidden="true">
                 </div>
 
                 <p class="header-subtitle">Classificação automática de emails corporativos</p>
             </div>
             <button class="page-theme" aria-label="Alterar tema claro e escuro">
                 <span class="theme-icon-sol">
-                    <img src="imgs/icone-sol-claro.png" alt="Tema claro">
+                    <img src="imgs/header/icone-sol-claro.png" alt="Tema claro">
                 </span>
                 <span class="theme-icon-lua">
-                    <img src="imgs/icone-lua-clara.png" alt="Tema escuro">
+                    <img src="imgs/header/icone-lua-clara.png" alt="Tema escuro">
                 </span>
             </button>
         </div>
     </header>
+    <main class="main-page">
+        <div class="metrics-dashboard">
+            <div class="metrics-card">
+                <div class="card-line">
+                    <h2>Total de Emails</h2>
+                    <span class="metrics-card-icon icon-total">
+                        <img src="imgs/dashboard-metrics/icone-email.png" alt="">
+                    </span>
+                </div>
+                <span class="number-email-total">0</span>
+            </div>
+            <div class="metrics-card">
+                <div class="card-line">
+                    <h2>Produtivos</h2>
+                    <span class="metrics-card-icon icon-productive">
+                        <img src="imgs/dashboard-metrics/icone-produtivo.png" alt="">
+                    </span>
+                </div>
+                <span class="number-productive">0</span>
+            </div>
+            <div class="metrics-card">
+                <div class="card-line">
+                    <h2>Improdutivos</h2>
+                    <span class="metrics-card-icon icon-unproductive">
+                        <img src="imgs/dashboard-metrics/icone-inprodutivo.png" alt="">
+                    </span>
+                </div>
+                <span class="number-unproductive">0</span>
+            </div>
+            <div class="metrics-card">
+                <div class="card-line">
+                    <h2>Taxa de Produtividade</h2>
+                    <span class="metrics-card-icon icon-performance">
+                        <img src="imgs/dashboard-metrics/icone-taxa-performance.png" alt="">
+                    </span>
+                </div>
+                <span class="number-performance">0</span>
+            </div>
+        </div>
+    </main>
 
     <script src="js/script.js"></script>
 </body>

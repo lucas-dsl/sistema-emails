@@ -1,5 +1,4 @@
 /* PADRONIZAÇÃO */
-
 * {
     margin: 0;
     padding: 0;
@@ -10,15 +9,17 @@ html {
     font-size: 62.5%;
 }
 
-/* COR DE FUNDO E FONTE */
+.main-page {
+    margin: 2% 12%;
+}
 
+/* COR DE FUNDO E FONTE */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #dedede;
+    font-family: "Inter", system-ui, sans-serif;
+    background-color: #f8f8f8;
 }
 
 /* HEADER */
-
 .header-page {
     display: flex;
     border-bottom: 1px solid rgba(146, 146, 146, 0.215);
@@ -73,11 +74,11 @@ body {
 .page-theme {
     display: flex;
     justify-content: space-between;
-    background-color: #d7d7d7;
+    background-color: #ececec;
     padding: .3rem .3rem;
     border: 1px solid rgba(0, 0, 0, 0.200);
     border-radius: 2rem;
-    width: 8rem;
+    width: 7.5rem;
 }
 
 .page-theme img {
@@ -91,7 +92,91 @@ body {
     padding: .3rem;
 }
 
-.theme-icon-sol, .theme-icon-lua {
+.theme-icon-sol,
+.theme-icon-lua {
     display: flex;
     align-items: center;
+}
+
+/* PAINEL DE MÉTRICAS */
+.metrics-dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.metrics-card {
+    padding: 1.6rem;
+    border-radius: 1rem;
+    width: 23%;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition-duration: 0.3s;
+}
+
+.metrics-card:hover {
+    transform: translateY(-0.4rem);
+}
+
+.metrics-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    padding: .8rem;
+}
+
+.metrics-card-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.card-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-line h2 {
+    color: #5C6F8A;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.metrics-card span {
+    font-size: 3.4rem;
+    font-weight: bold;
+}
+
+.icon-total {
+    background-color: #0b64f42c;
+}
+
+.icon-productive {
+    background-color: #2cff2c2c;
+}
+
+.icon-unproductive {
+    background-color: #ff00002c;
+}
+
+.icon-performance {
+    background-color: #8080802c;
+}
+
+.number-email-total {
+    color: #0b64f4;
+}
+
+.number-productive {
+    color: #22bf22;
+}
+
+.number-unproductive {
+    color: #d80101;
+}
+
+.number-performance {
+    color: #808080;
 }
