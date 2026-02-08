@@ -74,16 +74,16 @@
         </div>
 
         <section class="email-analysis">
-            <nav class="mode-switch">
+            <div class="mode-switch" role="tablist">
                 <button id="mode-switch-active"><img src="imgs/email-analysis/icone-lapis.png" alt=""
                         class="icone-lapis" aria-hidden="true">Escrever
                     email</button>
                 <button><img src="imgs/email-analysis/icone-upload.png" alt="" class="icone-upload"
                         aria-hidden="true">Upload de
                     arquivos</button>
-            </nav>
+            </div>
 
-            <form action="" class="form-analysis">
+            <form class="form-analysis">
                 <div class="form-row">
                     <div class="field field-width">
                         <label for="subject">Assunto</label>
@@ -119,7 +119,7 @@
 
                 <div class="email-list-search">
                     <img src="imgs/email-list/icone-pesquisar.png" alt="Pesquisar Emails">
-                    <input type="search" placeholder="Buscar por palavra-chave...">
+                    <input type="search" placeholder="Buscar por palavra-chave..." aria-label="Buscar emails">
                 </div>
             </div>
 
@@ -156,14 +156,14 @@
                         </td>
                         <td>
                             <div class="email-actions">
-                                <button>
-                                    <img src="imgs/email-list/icone-olho.png" alt="Visualizar Email">
+                                <button aria-label="Visualizar email">
+                                    <img src="imgs/email-list/icone-olho.png" alt="" aria-hidden="true">
                                 </button>
-                                <button>
-                                    <img src="imgs/email-list/icone-sugestao-resposta.png" alt="Sugestão de Resposta">
+                                <button aria-label="Sugestão de resposta">
+                                    <img src="imgs/email-list/icone-sugestao-resposta.png" alt="" aria-hidden="true">
                                 </button>
-                                <button>
-                                    <img src="imgs/email-list/icone-lixeira.png" alt="Excluir Email">
+                                <button aria-label="Excluir email">
+                                    <img src="imgs/email-list/icone-lixeira.png" alt="" aria-hidden="true">
                                 </button>
                             </div>
                         </td>
