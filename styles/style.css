@@ -37,20 +37,49 @@ textarea:focus-visible {
 :root {
     --color-primary: #0B64F4;
     --color-sucess: #20C941DB;
+    --color-border-default: rgba(0, 0, 0, 0.250);
 
     --bg-color-primary: #0b64f42c;
     --bg-color-sucess: #20c94233;
     --bg-text-color-second: #5c6f8a28;
     --bg-container: #fff;
+    --bg-page: #f8f8f8;
+    --bg-input-form: #f0f0f0;
+    --bg-mode-switch-active: #f8f8f8;
+    --bg-hover-default: #f7f9fc;
 
     --text-color-primary: #4f5d6f;
     --text-color-second: #5C6F8A;
+    --text-color-strong: #000;
 }
+
+/* TEMA ESCURO */
+.dark-theme {
+
+    --color-primary: #4C8DFF;
+    --color-sucess: #3EE089;
+    --color-border-default: rgba(255, 255, 255, 0.25);
+
+    --bg-color-primary: #4c8dff1f;
+    --bg-color-sucess: #3ee0891f;
+    --bg-text-color-second: #334155;
+
+    --bg-container: #1e293b;
+    --bg-page: #0f172a;
+    --bg-input-form: transparent;
+    --bg-mode-switch-active: rgba(63, 82, 128, 0.434);
+    --bg-hover-default: #0b64f40f;
+
+    --text-color-primary: #e2e8f0;
+    --text-color-second: #94a3b8;
+    --text-color-strong: #fff;
+}
+
 
 /* COR DE FUNDO E FONTE */
 body {
     font-family: "Inter", system-ui, sans-serif;
-    background-color: #f8f8f8;
+    background-color: var(--bg-page);
 }
 
 /* HEADER */
@@ -97,6 +126,7 @@ body {
 .header-brand h1 {
     font-size: 3.5rem;
     font-weight: bold;
+    color: var(--text-color-strong);
 }
 
 .header-subtitle {
@@ -108,9 +138,9 @@ body {
 .page-theme {
     display: flex;
     justify-content: space-between;
-    background-color: #ececec;
+    background-color: var(--bg-page);
     padding: .3rem .3rem;
-    border: 1px solid rgba(0, 0, 0, 0.200);
+    border: 1px solid var(--color-border-default);
     border-radius: 2rem;
     width: 7.5rem;
 }
@@ -120,10 +150,13 @@ body {
     height: 2.5rem;
 }
 
-.theme-icon-sol {
+.theme-icon-sol, .theme-icon-lua {
+    padding: .3rem;
+}
+
+.theme-active {
     background-color: var(--color-primary);
     border-radius: 50%;
-    padding: .3rem;
 }
 
 .theme-icon-sol,
@@ -219,19 +252,20 @@ body {
 .email-analysis {
     background-color: var(--bg-container);
     padding: 2rem;
+    border-radius: 1rem;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .mode-switch {
     display: flex;
     justify-content: space-around;
-    background-color: #eaeaea;
+    background-color: var(--bg-text-color-second);
     padding: .5rem;
     border-radius: 1rem;
 }
 
 #mode-switch-active {
-    background-color: #f4f4f4;
+    background-color: var(--bg-mode-switch-active);
 }
 
 .mode-switch button {
@@ -243,7 +277,7 @@ body {
     width: 50%;
     border: none;
     border-radius: 1rem;
-    background-color: #eaeaea;
+    background-color: transparent;
     padding: .5rem;
     color: var(--text-color-primary);
     gap: 1rem;
@@ -285,6 +319,7 @@ body {
     padding: 1rem;
     font-size: 1.6rem;
     width: 100%;
+    background-color: var(--bg-input-form);
 }
 
 textarea {
@@ -398,11 +433,15 @@ textarea {
     padding: 2rem;
     text-align: left;
     vertical-align: middle;
-    border-bottom: 1px solid #eee;
+}
+
+.email-table tbody tr:not(:last-child) {
+    border-top: 1px solid var(--color-border-default);
+    border-bottom: 1px solid var(--color-border-default);
 }
 
 .email-table tr:hover {
-    background: #f7f9fc;
+    background: var(--bg-hover-default);
 }
 
 .email-table-title {
@@ -420,6 +459,7 @@ textarea {
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: var(--text-color-strong);
 }
 
 .sender-email-icon {

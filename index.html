@@ -23,8 +23,8 @@
 
                 <p class="header-subtitle">Classificação automática de emails corporativos</p>
             </div>
-            <button class="page-theme" aria-label="Alterar tema claro e escuro">
-                <span class="theme-icon-sol">
+            <button class="page-theme" aria-label="Alterar tema claro e escuro" id="switch-theme">
+                <span class="theme-icon-sol theme-active">
                     <img src="imgs/header/icone-sol-claro.png" alt="Tema claro">
                 </span>
                 <span class="theme-icon-lua">
@@ -42,7 +42,7 @@
                         <img src="imgs/dashboard-metrics/icone-email.png" alt="" aria-hidden="true">
                     </span>
                 </div>
-                <span class="number-email-total">0</span>
+                <span class="number-email-total">2</span>
             </div>
             <div class="metrics-card">
                 <div class="card-line">
@@ -51,7 +51,7 @@
                         <img src="imgs/dashboard-metrics/icone-produtivo.png" alt="" aria-hidden="true">
                     </span>
                 </div>
-                <span class="number-productive">0</span>
+                <span class="number-productive">1</span>
             </div>
             <div class="metrics-card">
                 <div class="card-line">
@@ -60,7 +60,7 @@
                         <img src="imgs/dashboard-metrics/icone-improdutivo.png" alt="" aria-hidden="true">
                     </span>
                 </div>
-                <span class="number-unproductive">0</span>
+                <span class="number-unproductive">1</span>
             </div>
             <div class="metrics-card">
                 <div class="card-line">
@@ -69,7 +69,7 @@
                         <img src="imgs/dashboard-metrics/icone-taxa-performance.png" alt="" aria-hidden="true">
                     </span>
                 </div>
-                <span class="number-performance">0</span>
+                <span class="number-performance">50%</span>
             </div>
         </div>
 
@@ -112,9 +112,9 @@
         <section class="email-list">
             <div class="email-list-toolbar">
                 <nav class="email-list-filters">
-                    <button class="filter filter-active">Todos <span>0</span></button>
-                    <button class="filter">Produtivos <span>0</span></button>
-                    <button class="filter">Improdutivos <span>0</span></button>
+                    <button class="filter filter-active">Todos <span>2</span></button>
+                    <button class="filter">Produtivos <span>1</span></button>
+                    <button class="filter">Improdutivos <span>1</span></button>
                 </nav>
 
                 <div class="email-list-search">
@@ -168,9 +168,6 @@
                             </div>
                         </td>
                     </tr>
-                </tbody>
-
-                <tbody class="email-table-body">
                     <tr>
                         <td class="subject-email">RE: Fwd: Fwd: Piadas do dia</td>
                         <td>
