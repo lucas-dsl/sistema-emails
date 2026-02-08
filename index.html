@@ -75,9 +75,11 @@
 
         <section class="email-analysis">
             <nav class="mode-switch">
-                <button><img src="imgs/email-analysis/icone-lapis.png" alt="" class="icone-lapis" aria-hidden="true">Escrever
+                <button id="mode-switch-active"><img src="imgs/email-analysis/icone-lapis.png" alt=""
+                        class="icone-lapis" aria-hidden="true">Escrever
                     email</button>
-                <button><img src="imgs/email-analysis/icone-upload.png" alt="" class="icone-upload" aria-hidden="true">Upload de
+                <button><img src="imgs/email-analysis/icone-upload.png" alt="" class="icone-upload"
+                        aria-hidden="true">Upload de
                     arquivos</button>
             </nav>
 
@@ -85,11 +87,13 @@
                 <div class="form-row">
                     <div class="field field-width">
                         <label for="subject">Assunto</label>
-                        <input id="subject" name="subject" type="text" placeholder="Digite o assunto do email" class="field-bg" required>
+                        <input id="subject" name="subject" type="text" placeholder="Digite o assunto do email"
+                            class="field-bg" required>
                     </div>
                     <div class="field field-width">
                         <label for="sender">Remetente</label>
-                        <input id="sender" name="sender" type="email" placeholder="email@exemplo.com" class="field-bg" required>
+                        <input id="sender" name="sender" type="email" placeholder="email@exemplo.com" class="field-bg"
+                            required>
                     </div>
                 </div>
                 <div class="field">
@@ -99,9 +103,25 @@
                 </div>
 
                 <div class="submit-analysis">
-                    <button type="submit"><img src="imgs/email-analysis/icone-enviar.png" alt="" aria-hidden="true">Analisar Email</button>
+                    <button type="submit"><img src="imgs/email-analysis/icone-enviar.png" alt=""
+                            aria-hidden="true">Analisar Email</button>
                 </div>
             </form>
+        </section>
+
+        <section class="email-list">
+            <div class="email-list-toolbar">
+                <nav class="email-list-filters">
+                    <button class="filter filter-active">Todos <span>0</span></button>
+                    <button class="filter">Produtivos <span>0</span></button>
+                    <button class="filter">Improdutivos <span>0</span></button>
+                </nav>
+
+                <div class="email-list-search">
+                    <img src="imgs/email-list/icone-pesquisar.png" alt="Pesquisar Emails">
+                    <input type="search" placeholder="Buscar por palavra-chave...">
+                </div>
+            </div>
         </section>
     </main>
 

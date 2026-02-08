@@ -208,6 +208,10 @@ body {
     border-radius: 1rem;
 }
 
+#mode-switch-active {
+    background-color: #f4f4f4; 
+}
+
 .mode-switch button {
     display: flex;
     align-items: center;
@@ -236,7 +240,7 @@ body {
 
 .form-row {
     display: flex;
-    justify-content: space-between;
+    gap: 2rem;
 }
 
 .field {
@@ -287,4 +291,65 @@ textarea {
 
 .submit-analysis img {
     width: 2rem;
+}
+
+/* SEÇÃO PARA LISTAR OS EMAILS */
+.email-list {
+    display: flex;
+}
+
+.email-list-toolbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.email-list-filters {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter {
+    border: none;
+    background-color: transparent;
+    font-size: 1.6rem;
+    color: #5C6F8A;
+}
+
+.filter-active {
+    background-color: #0B64F4;
+    padding: 1rem 1.8rem;
+    border-radius: 1.5rem;
+    color: #fff;
+    gap: 1rem;
+}
+
+.filter-active span {
+    background-color: #4e92ff;
+    padding: .3rem .6rem;
+    border-radius: 3rem;
+}
+
+.email-list-search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.201);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.email-list-search img {
+    width: 2rem;
+}
+
+.email-list-search input {
+    border: none;
+    outline: none;
+}
+
+.email-list-search:focus-within {
+    border: 1px solid #0B64F4;
+
 }
