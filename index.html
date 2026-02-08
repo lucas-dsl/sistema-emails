@@ -39,7 +39,7 @@
                 <div class="card-line">
                     <h2>Total de Emails</h2>
                     <span class="metrics-card-icon icon-total">
-                        <img src="imgs/dashboard-metrics/icone-email.png" alt="">
+                        <img src="imgs/dashboard-metrics/icone-email.png" alt="" aria-hidden="true">
                     </span>
                 </div>
                 <span class="number-email-total">0</span>
@@ -48,7 +48,7 @@
                 <div class="card-line">
                     <h2>Produtivos</h2>
                     <span class="metrics-card-icon icon-productive">
-                        <img src="imgs/dashboard-metrics/icone-produtivo.png" alt="">
+                        <img src="imgs/dashboard-metrics/icone-produtivo.png" alt="" aria-hidden="true">
                     </span>
                 </div>
                 <span class="number-productive">0</span>
@@ -57,7 +57,7 @@
                 <div class="card-line">
                     <h2>Improdutivos</h2>
                     <span class="metrics-card-icon icon-unproductive">
-                        <img src="imgs/dashboard-metrics/icone-inprodutivo.png" alt="">
+                        <img src="imgs/dashboard-metrics/icone-inprodutivo.png" alt="" aria-hidden="true">
                     </span>
                 </div>
                 <span class="number-unproductive">0</span>
@@ -66,12 +66,43 @@
                 <div class="card-line">
                     <h2>Taxa de Produtividade</h2>
                     <span class="metrics-card-icon icon-performance">
-                        <img src="imgs/dashboard-metrics/icone-taxa-performance.png" alt="">
+                        <img src="imgs/dashboard-metrics/icone-taxa-performance.png" alt="" aria-hidden="true">
                     </span>
                 </div>
                 <span class="number-performance">0</span>
             </div>
         </div>
+
+        <section class="email-analysis">
+            <nav class="mode-switch">
+                <button><img src="imgs/email-analysis/icone-lapis.png" alt="" class="icone-lapis" aria-hidden="true">Escrever
+                    email</button>
+                <button><img src="imgs/email-analysis/icone-upload.png" alt="" class="icone-upload" aria-hidden="true">Upload de
+                    arquivos</button>
+            </nav>
+
+            <form action="" class="form-analysis">
+                <div class="form-row">
+                    <div class="field field-width">
+                        <label for="subject">Assunto</label>
+                        <input id="subject" name="subject" type="text" placeholder="Digite o assunto do email" class="field-bg" required>
+                    </div>
+                    <div class="field field-width">
+                        <label for="sender">Remetente</label>
+                        <input id="sender" name="sender" type="email" placeholder="email@exemplo.com" class="field-bg" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="content">Conteúdo do Email</label>
+                    <textarea name="content" id="content" placeholder="Cole ou digite o email completo aqui"
+                        class="field-bg" required></textarea>
+                </div>
+
+                <div class="submit-analysis">
+                    <button type="submit"><img src="imgs/email-analysis/icone-enviar.png" alt="" aria-hidden="true">Analisar Email</button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <script src="js/script.js"></script>
