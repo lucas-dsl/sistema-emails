@@ -296,6 +296,8 @@ textarea {
 /* SEÇÃO PARA LISTAR OS EMAILS */
 .email-list {
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .email-list-toolbar {
@@ -338,6 +340,7 @@ textarea {
     border: 1px solid rgba(0, 0, 0, 0.201);
     padding: 1rem;
     border-radius: 1rem;
+    width: 20%;
 }
 
 .email-list-search img {
@@ -347,9 +350,110 @@ textarea {
 .email-list-search input {
     border: none;
     outline: none;
+    background-color: transparent;
+    width: 100%;
 }
 
 .email-list-search:focus-within {
     border: 1px solid #0B64F4;
+}
 
+.email-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 1.2rem;
+}
+
+.email-table img {
+    width: 2rem;
+}
+
+.email-table th,
+.email-table td {
+    padding: 2rem;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+}
+
+.email-table tr:hover {
+    background: #f7f9fc;
+}
+
+.email-table-title {
+    text-align: left;
+    color: #5C6F8A;
+    font-size: 1.5rem;
+}
+
+.subject-email {
+    font-size: 1.6rem;
+    color: #5C6F8A;
+}
+
+.sender-email {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sender-email-icon {
+    display: flex;
+    align-items: center;
+    background-color: #0b64f42e;
+    border-radius: 3rem;
+    padding: .5rem;
+}
+
+.info-sender-email {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+}
+
+.info-sender-email small {
+    color: #5C6F8A;
+}
+
+.email-date {
+    font-size: 1.5rem;
+    color: #5C6F8A;
+}
+
+.email-status {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 1.4rem;
+    padding: 0.4rem 1rem;
+    border-radius: 5rem;
+}
+
+.email-status-productive {
+    background-color: #20c94233;
+    color: #20C941DB;
+}
+
+.email-status-unproductive {
+    background-color: #ff000033;
+    color: #ff0000db;
+}
+
+.email-actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.email-actions button {
+    border: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+
+.email-actions button:hover {
+    background-color: #5c6f8a28;
+    border-radius: 1rem;
 }
