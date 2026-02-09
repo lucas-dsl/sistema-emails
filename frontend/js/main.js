@@ -2,6 +2,7 @@ import initModeSwitch from "./mode-switch.js";
 import initTheme from "./theme.js";
 import { analisarEmail } from "./api.js";
 import { adicionarNaTabela } from "./table.js";
+import { atualizarMetricas } from "./metrics.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
@@ -22,6 +23,7 @@ form.addEventListener("submit", async (e) => {
   const resultado = await analisarEmail(dados);
 
   adicionarNaTabela(resultado);
+  atualizarMetricas();
 
   form.reset();
 });
