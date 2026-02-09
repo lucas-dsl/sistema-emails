@@ -1,15 +1,3 @@
-// TEMA (Light / Dark)
-const themeBtn = document.getElementById("switch-theme");
-const sun = document.querySelector(".theme-icon-sol");
-const moon = document.querySelector(".theme-icon-lua");
-
-themeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-theme");
-
-  sun.classList.toggle("theme-active");
-  moon.classList.toggle("theme-active");
-});
-
 // MODO DE ANÁLISE DO EMAIL
 const writeBtn = document.querySelector(".btn-write");
 const uploadBtn = document.querySelector(".btn-upload");
@@ -35,3 +23,7 @@ function activateUpload() {
 
 writeBtn.addEventListener("click", activateWrite);
 uploadBtn.addEventListener("click", activateUpload);
+
+export default function initModeSwitch() {
+  console.log("mode switch iniciado");
+}
