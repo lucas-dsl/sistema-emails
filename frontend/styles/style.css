@@ -368,6 +368,22 @@ textarea {
     opacity: 0.8;
 }
 
+.file-name {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--color-primary);
+    background: var(--bg-color-primary);
+    padding: 1rem 1.2rem;
+    border-radius: .8rem;
+    border: 1px dashed var(--color-primary);
+}
+
+.mode-upload button[type="submit"].btn-active {
+    background-color: var(--color-primary);
+    color: white;
+}
+
 .upload-area:hover .upload-ui {
     border-color: var(--color-primary);
     background-color: var(--bg-color-primary);
@@ -390,7 +406,7 @@ textarea {
     cursor: pointer;
 }
 
-.submit-analysis button:hover {
+.submit-analysis button.btn-active {
     background-color: var(--color-primary);
 }
 
@@ -422,11 +438,11 @@ textarea {
     background-color: transparent;
     font-size: 1.6rem;
     color: var(--text-color-primary);
+    padding: 1rem 1.8rem;
 }
 
 .filter-active {
     background-color: var(--color-primary);
-    padding: 1rem 1.8rem;
     border-radius: 1.5rem;
     color: var(--bg-container);
     gap: 1rem;
