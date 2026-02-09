@@ -1,7 +1,9 @@
 # IMPORTAÇÕES
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import PyPDF2
+import io
 
 # CRIA A API
 app = FastAPI()
@@ -21,7 +23,7 @@ class EmailData(BaseModel):
     sender: str
     content: str
 
-# FUNÇÃO DE "ANÁLISE" (Teste)
+# FUNÇÃO DE ANÁLISE (Teste) -> Vou trocar pela api da Openai
 def analyze_text(text: str):
     """
     Regra simples:
@@ -39,7 +41,7 @@ def analyze_text(text: str):
 
     return "productive"
 
-# ROTA PRINCIPAL
+# ROTA PRINCIPAL (ANALISA EMAIL ESCRITO)
 @app.post("/analyze")
 def analyze_email(data: EmailData):
 
@@ -52,5 +54,27 @@ def analyze_email(data: EmailData):
     return {
         "subject": subject,
         "sender": sender,
+        "status": status
+    }
+
+# ROTA QUE ANALISA ARQUIVO DO UPLOAD
+@app.post("/analyze-file")
+async def analyze_file(file: UploadFile = File(...)):
+    content = ""
+    
+    if file.filename.endswith(".txt"):
+        content = (await file.read()).decode("utf-8")
+        
+    elif file.filename.endswith(".pdf"):
+        pdf_data = await file.read()
+        pdf_reader = PyPDF2.PdfReader(io.BytesIO(pdf_data))
+        for page in pdf_reader.pages:
+            content += page.extract_text()
+
+    status = analyze_text(content)
+
+    return {
+        "subject": f"Arquivo: {file.filename}",
+        "sender": "Upload Local",
         "status": status
     }
