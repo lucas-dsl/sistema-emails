@@ -75,15 +75,15 @@
 
         <section class="email-analysis">
             <div class="mode-switch" role="tablist">
-                <button id="mode-switch-active"><img src="imgs/email-analysis/icone-lapis.png" alt=""
-                        class="icone-lapis" aria-hidden="true">Escrever
+                <button class="btn-write mode-switch-active" type="button"><img
+                        src="imgs/email-analysis/icone-lapis.png" alt="" class="icone-lapis" aria-hidden="true">Escrever
                     email</button>
-                <button><img src="imgs/email-analysis/icone-upload.png" alt="" class="icone-upload"
-                        aria-hidden="true">Upload de
+                <button class="btn-upload" type="button"><img src="imgs/email-analysis/icone-upload.png" alt=""
+                        class="icone-upload" aria-hidden="true">Upload de
                     arquivos</button>
             </div>
 
-            <form class="form-analysis">
+            <form class="form-analysis mode-write">
                 <div class="form-row">
                     <div class="field field-width">
                         <label for="subject">Assunto</label>
@@ -105,6 +105,23 @@
                 <div class="submit-analysis">
                     <button type="submit"><img src="imgs/email-analysis/icone-enviar.png" alt=""
                             aria-hidden="true">Analisar Email</button>
+                </div>
+            </form>
+
+            <form class="form-analysis mode-upload is-hidden">
+                <label class="upload-area">
+                    <input type="file" accept=".txt, .pdf" class="upload-input">
+                    <div class="upload-ui">
+                        <img src="imgs/email-analysis/icone-upload.png" alt="" aria-hidden="true">
+                        <span>Selecionar arquivo ou arrastar aqui</span>
+                    </div>
+                </label>
+
+                <div class="submit-analysis">
+                    <button type="submit">
+                        <img src="imgs/email-analysis/icone-enviar.png" aria-hidden="true">
+                        Analisar Arquivo
+                    </button>
                 </div>
             </form>
         </section>

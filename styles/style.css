@@ -33,6 +33,14 @@ textarea:focus-visible {
     border-radius: 6px;
 }
 
+.is-hidden {
+    display: none !important;
+}
+
+.mode-switch-active {
+    background-color: var(--bg-mode-switch-active) !important;
+}
+
 /* VARIÁVEIS DE COR */
 :root {
     --color-primary: #0B64F4;
@@ -150,7 +158,8 @@ body {
     height: 2.5rem;
 }
 
-.theme-icon-sol, .theme-icon-lua {
+.theme-icon-sol,
+.theme-icon-lua {
     padding: .3rem;
 }
 
@@ -264,10 +273,6 @@ body {
     border-radius: 1rem;
 }
 
-#mode-switch-active {
-    background-color: var(--bg-mode-switch-active);
-}
-
 .mode-switch button {
     display: flex;
     align-items: center;
@@ -325,6 +330,47 @@ body {
 textarea {
     resize: none;
     height: 20rem;
+}
+
+.upload-area {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-ui {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25rem;
+    gap: 1.2rem;
+    padding: 4rem 2rem;
+    border: 2px dashed var(--bg-text-color-second);
+    border-radius: 1.2rem;
+    background-color: var(--bg-container);
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.upload-ui span {
+    font-size: 1.6rem;
+    color: var(--text-color-second);
+    font-weight: 500;
+}
+
+.upload-ui img {
+    width: 3.2rem;
+    opacity: 0.8;
+}
+
+.upload-area:hover .upload-ui {
+    border-color: var(--color-primary);
+    background-color: var(--bg-color-primary);
 }
 
 .submit-analysis button {
