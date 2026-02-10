@@ -20,6 +20,9 @@ O **Consulta de Emails** é uma aplicação Fullstack desenvolvida para automati
 * **Inteligência Artificial**: Integração com a API da OpenAI para Processamento de Linguagem Natural (NLP).
 * **Deploy**: Estrutura Fullstack hospedada na **Vercel** utilizando Serverless Functions.
 
+## 📐 Arquitetura do projeto
+A estrutura foi otimizada para o ecossistema Vercel, mantendo os endpoints na pasta `/api` e o frontend na raiz para máxima compatibilidade.
+
 ## 📦 Como Executar Localmente
 
 ### 1. Requisitos Prévios
@@ -49,10 +52,6 @@ uvicorn api.main:app --reload
 * Abra o arquivo `index.html` diretamente no navegador (ou utilize a extensão **Live Server** no VS Code).
 * Certifique-se de que a `BASE_URL` no seu arquivo JS está apontando para `http://127.0.0.1:8000` para testes locais.
 ```
----
-
-## 📐 Arquitetura do projeto
-A estrutura foi otimizada para o ecossistema Vercel, mantendo os endpoints na pasta `/api` e o frontend na raiz para máxima compatibilidade.
 
 ---
 Desenvolvido com ☕ por **Lucas Silva**.
