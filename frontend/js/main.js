@@ -5,6 +5,11 @@ import { adicionarNaTabela } from "./table.js";
 import { atualizarMetricas } from "./metrics.js";
 import initFilters from "./filters.js";
 
+// Verificar se o site roda local ou na vercel e definir a URL da API de acordo
+const API_URL = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
+  ? "http://127.0.0.1:8000"
+  : "https://sistema-emails.vercel.app/api";
+
 document.addEventListener("DOMContentLoaded", () => {
   // 1. INICIALIZAÇÃO DE MÓDULOS EXTERNOS
   initTheme();
@@ -129,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalElements.campoTexto.value = "Gerando sugestão de resposta... ✨";
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/suggest-reply", {
+      const response = await fetch(`${API_URL}/suggest-reply`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ content, category })
