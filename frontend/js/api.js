@@ -13,8 +13,7 @@ export async function analisarEmail(emailData) {
   return response.json();
 }
 
-export async function analisarArquivo(file) {
-  
+export async function analisarArquivo(file) {  
   const formData = new FormData();
   formData.append("file", file);
 
@@ -22,6 +21,11 @@ export async function analisarArquivo(file) {
     method: "POST",
     body: formData,
   });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Erro no servidor: ${errorText}`);
+  }
 
   return response.json();
 }
