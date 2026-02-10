@@ -49,9 +49,10 @@ uvicorn api.main:app --reload
 * Abra o arquivo `index.html` diretamente no navegador (ou utilize a extensão **Live Server** no VS Code).
 * Certifique-se de que a `BASE_URL` no seu arquivo JS está apontando para `http://127.0.0.1:8000` para testes locais.
 ```
+---
 
 ## 📐 Arquitetura do projeto
 A estrutura foi otimizada para o ecossistema Vercel, mantendo os endpoints na pasta `/api` e o frontend na raiz para máxima compatibilidade.
 
---
+---
 Desenvolvido com ☕ por **Lucas Silva**.
