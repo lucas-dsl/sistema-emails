@@ -50,8 +50,8 @@ uvicorn api.main:app --reload
 * Certifique-se de que a `BASE_URL` no seu arquivo JS está apontando para `http://127.0.0.1:8000` para testes locais.
 ```
 
-### 3. 📐 Arquitetura do projeto
+## 📐 Arquitetura do projeto
 A estrutura foi otimizada para o ecossistema Vercel, mantendo os endpoints na pasta `/api` e o frontend na raiz para máxima compatibilidade.
 
----
+--
 Desenvolvido com ☕ por **Lucas Silva**.
