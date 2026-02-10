@@ -177,10 +177,66 @@
                 <h2>Essa funcionalidade está em desenvolvimento. 🎊</h2>
             </div>
         </div>
+        <div class="modal-suggestion" id="modalSugestao">
+            <div class="container-suggestion">
+                <button class="close-x" id="close-modal">&times;</button>
 
-    </main>
+                <header>
+                    <h2>Sugestão de Resposta</h2>
 
-    <script type="module" src="js/main.js"></script>
+                    <div class="info-badge-container">
+                        <div class="info-text-side">
+                            <div class="info-item">
+                                <label>Assunto</label>
+                                <strong id="modal-subject">---</strong>
+                            </div>
+                            <div class="info-item">
+                                <label>Remetente</label>
+                                <strong id="modal-sender">---</strong>
+                            </div>
+                        </div>
+
+                        <div class="status-badge" id="modal-status">
+                            <div class="status-circle"></div>
+                            <span>---</span>
+                        </div>
+                    </div>
+                </header>
+
+                <main>
+                    <div class="main-header">
+                        <h3>Resposta sugerida</h3>
+                        <button class="btn-edit-mode">
+                            <img src="imgs/email-analysis/icone-lapis.png" alt="">
+                            <span>Editar</span>
+                        </button>
+                    </div>
+
+                    <textarea id="texto-sugestao" spellcheck="false" readonly></textarea>
+                </main>
+
+                <footer>
+                    <div class="actions-btn-footer">
+                        <button class="btn-footer-close" id="btn-fechar-footer">
+                            <img src="imgs/modal/icone-x.png" alt="Fechar sugestão de resposta">
+                            <span>Fechar</span>
+                        </button>
+                        <div class="footer-right">
+                            <button class="btn-footer-copy" id="btnCopiar">
+                                <img src="imgs/modal/icone-copiar.png" alt="">
+                                <span>Copiar</span>
+                            </button>
+                            <button class="btn-footer-send">
+                                <img src="imgs/email-analysis/icone-enviar.png" alt="">
+                                <span>Enviar</span>
+                            </button>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

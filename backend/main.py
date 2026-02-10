@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from nlp_utils import preprocess_text
 from ai_service import classify_email
+from ai_service import generate_reply
 import PyPDF2
 import io
 
@@ -69,3 +70,13 @@ async def analyze_file(file: UploadFile = File(...)):
 
     status = classify_email(preprocess_text(content))
     return {"subject": file.filename, "sender": "Arquivo Upload", "status": status}
+
+# SUGESTÃO DE RESPOSTA
+@app.post("/suggest-reply")
+async def suggest_reply(data: dict):
+    content = data.get("content", "")
+    category = data.get("category", "")
+    
+    reply = generate_reply(content, category)
+    
+    return {"reply": reply}

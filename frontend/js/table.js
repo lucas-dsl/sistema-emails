@@ -69,13 +69,19 @@ export function adicionarNaTabela(email) {
       <td>
           <div class="email-actions">
               <button id="view"><img src="imgs/email-list/icone-olho.png"></button>
-              <button><img src="imgs/email-list/icone-sugestao-resposta.png"></button>
+              <button class="btn-suggest"><img src="imgs/email-list/icone-sugestao-resposta.png"></button>
               <button class="btn-delete"><img src="imgs/email-list/icone-lixeira.png"></button>
           </div>
       </td>
   `;
 
   tbody.prepend(tr);
+  const btnSuggest = tr.querySelector(".btn-suggest");
+
+  btnSuggest.dataset.content = email.content;
+  btnSuggest.dataset.subject = email.subject;
+  btnSuggest.dataset.sender = email.sender;
+  btnSuggest.dataset.category = email.status;
 }
 
 // DELETAR LINHAS

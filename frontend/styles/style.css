@@ -588,7 +588,8 @@ textarea {
     border-radius: 1rem;
 }
 
-.modal, .modal-action-view {
+.modal,
+.modal-action-view {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.543);
@@ -598,7 +599,8 @@ textarea {
     z-index: 2;
 }
 
-.modal-box, .modal-box-action-view {
+.modal-box,
+.modal-box-action-view {
     background: var(--bg-container);
     color: var(--text-color-strong);
     padding: 2.4rem;
@@ -639,4 +641,208 @@ textarea {
 .danger {
     color: #fff;
     background: #e53935;
+}
+
+.modal-suggestion {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+}
+
+.modal-suggestion.active {
+    display: flex;
+}
+
+.container-suggestion {
+    background: var(--bg-container);
+    width: 68rem;
+    border-radius: 2.4rem;
+    padding: 3.2rem;
+    /* 32px */
+    position: relative;
+}
+
+.container-suggestion header h2 {
+    font-size: 2rem;
+    color: var(--text-color-strong);
+}
+
+.close-x {
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    background: none;
+    border: none;
+    font-size: 3rem;
+    color: #8E95A2;
+    cursor: pointer;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.main-header h3 {
+    color: var(--text-color-primary);
+    font-size: 1.5rem;
+}
+
+.btn-edit-mode {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--text-color-second);
+    background-color: var(--bg-input-form);
+    border: 1px solid var(--color-border-default);
+    cursor: pointer;
+}
+
+.main-header button img {
+    width: 2rem;
+}
+
+.info-badge-container {
+    background: var(--bg-container);
+    border-radius: 1.6rem;
+    padding: 2.4rem;
+    margin: 2.4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px solid var(--color-border-default);
+}
+
+.info-item:first-child {
+    margin-bottom: 1.2rem;
+}
+
+.info-item label {
+    display: block;
+    font-size: 1.3rem;
+    color: #8E95A2;
+    margin-bottom: 0.4rem;
+}
+
+.info-item strong {
+    color: var(--text-color-strong);
+    font-size: 1.5rem;
+}
+
+/* Status Badge Circular */
+.status-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.6rem 1.6rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.status-badge.produtivo {
+    background: #E6F7F0;
+    color: #2D9D78;
+}
+
+.status-badge.produtivo .status-circle {
+    background: #2D9D78;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+}
+
+.status-badge.improdutivo {
+    background: #FFF1F1;
+    color: #E03131;
+}
+
+.status-badge.improdutivo .status-circle {
+    background: #E03131;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+}
+
+#texto-sugestao {
+    width: 100%;
+    height: 24rem;
+    border: 0.1rem solid var(--color-border-default);
+    border-radius: 1.2rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-color-strong);
+    resize: none;
+    outline: none;
+    background-color: var(--bg-container);
+}
+
+/* Rodapé conforme imagem */
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.4rem;
+}
+
+.actions-btn-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.actions-btn-footer button {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    color: var(--text-color-second);
+    cursor: pointer;
+}
+
+.actions-btn-footer img {
+    width: 2rem;
+}
+
+.footer-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-right button {
+    border: none;
+}
+
+.btn-footer-close {
+    background: var(--bg-mode-switch-active);
+    border: 2px dashed var(--color-border-default);
+    transition: 0.2s;
+}
+
+.btn-footer-close:hover {
+    background-color: rgba(63, 82, 128, 0.121);
+}
+
+.btn-footer-copy {
+    background: var(--bg-color-primary);
+}
+
+.btn-footer-send {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.btn-footer-send span {
+    color: #fff;
 }
