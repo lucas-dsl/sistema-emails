@@ -86,3 +86,16 @@ fileInput.addEventListener("change", () => {
     btnSubmitUpload.classList.remove("btn-active");
   }
 });
+
+// FILTRO DE BUSCA POR ESCRITA
+const searchInput = document.querySelector(".email-list-search input");
+
+searchInput.addEventListener("input", () => {
+  const busca = searchInput.value.toLowerCase();
+  const linhas = document.querySelectorAll(".email-table-body tr");
+
+  linhas.forEach(linha => {
+    const conteudoLinha = linha.innerText.toLowerCase();
+    linha.style.display = conteudoLinha.includes(busca) ? "" : "none";
+  });
+});
