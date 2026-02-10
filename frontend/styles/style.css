@@ -476,6 +476,7 @@ textarea {
     outline: none;
     background-color: transparent;
     width: 100%;
+    color: var(--text-color-input-form);
 }
 
 .email-list-search:focus-within {
@@ -587,7 +588,7 @@ textarea {
     border-radius: 1rem;
 }
 
-.modal {
+.modal, .modal-action-view {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.543);
@@ -597,7 +598,7 @@ textarea {
     z-index: 2;
 }
 
-.modal-box {
+.modal-box, .modal-box-action-view {
     background: var(--bg-container);
     color: var(--text-color-strong);
     padding: 2.4rem;

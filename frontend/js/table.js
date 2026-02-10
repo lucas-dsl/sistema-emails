@@ -1,4 +1,5 @@
 import { atualizarMetricas } from "./metrics.js";
+import { funcionalidadeEmBreve } from "./actions-email-list.js";
 
 // GERA DATA ATUAL
 function gerarDataAtual() {
@@ -67,7 +68,7 @@ export function adicionarNaTabela(email) {
 
       <td>
           <div class="email-actions">
-              <button><img src="imgs/email-list/icone-olho.png"></button>
+              <button id="view"><img src="imgs/email-list/icone-olho.png"></button>
               <button><img src="imgs/email-list/icone-sugestao-resposta.png"></button>
               <button class="btn-delete"><img src="imgs/email-list/icone-lixeira.png"></button>
           </div>
@@ -83,14 +84,22 @@ let linhaParaExcluir = null;
 const tbody = document.querySelector("tbody");
 
 tbody.addEventListener("click", (e) => {
-
   const btnDelete = e.target.closest(".btn-delete");
-  if (!btnDelete) return;
 
-  linhaParaExcluir = btnDelete.closest("tr");
+  const btnView = e.target.closest("#view");
 
-  document.getElementById("modal-delete").classList.remove("is-hidden");
+  // Lógica para Deletar
+  if (btnDelete) {
+    linhaParaExcluir = btnDelete.closest("tr");
+    document.getElementById("modal-delete").classList.remove("is-hidden");
+    return;
+  }
 
+  // Lógica para Visualizar
+  if (btnView) {
+    funcionalidadeEmBreve();
+    return;
+  }
 });
 
 document.getElementById("cancel-delete").addEventListener("click", () => {
@@ -102,12 +111,12 @@ document.getElementById("cancel-delete").addEventListener("click", () => {
 
 document.getElementById("confirm-delete").addEventListener("click", () => {
 
-    if (linhaParaExcluir) {
-      linhaParaExcluir.remove();
-    }
+  if (linhaParaExcluir) {
+    linhaParaExcluir.remove();
+  }
 
-    document.getElementById("modal-delete").classList.add("is-hidden");
+  document.getElementById("modal-delete").classList.add("is-hidden");
 
-    linhaParaExcluir = null;
-    atualizarMetricas();
-  });
+  linhaParaExcluir = null;
+  atualizarMetricas();
+});
