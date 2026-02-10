@@ -586,3 +586,56 @@ textarea {
     background-color: #5c6f8a28;
     border-radius: 1rem;
 }
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.543);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.modal-box {
+    background: var(--bg-container);
+    color: var(--text-color-strong);
+    padding: 2.4rem;
+    border-radius: 1.2rem;
+    width: 34rem;
+    text-align: center;
+    display: flex;
+    gap: .6rem;
+    flex-direction: column;
+}
+
+.modal-box h2 {
+    font-size: 1.7rem;
+}
+
+.modal-box p {
+    font-size: 1.2rem;
+}
+
+.modal-actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#cancel-delete,
+.danger {
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+#cancel-delete {
+    background-color: #b9b9b9;
+}
+
+.danger {
+    color: #fff;
+    background: #e53935;
+}

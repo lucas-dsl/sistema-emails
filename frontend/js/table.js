@@ -1,3 +1,5 @@
+import { atualizarMetricas } from "./metrics.js";
+
 // GERA DATA ATUAL
 function gerarDataAtual() {
   const d = new Date();
@@ -67,10 +69,45 @@ export function adicionarNaTabela(email) {
           <div class="email-actions">
               <button><img src="imgs/email-list/icone-olho.png"></button>
               <button><img src="imgs/email-list/icone-sugestao-resposta.png"></button>
-              <button><img src="imgs/email-list/icone-lixeira.png"></button>
+              <button class="btn-delete"><img src="imgs/email-list/icone-lixeira.png"></button>
           </div>
       </td>
   `;
 
   tbody.prepend(tr);
 }
+
+// DELETAR LINHAS
+let linhaParaExcluir = null;
+
+const tbody = document.querySelector("tbody");
+
+tbody.addEventListener("click", (e) => {
+
+  const btnDelete = e.target.closest(".btn-delete");
+  if (!btnDelete) return;
+
+  linhaParaExcluir = btnDelete.closest("tr");
+
+  document.getElementById("modal-delete").classList.remove("is-hidden");
+
+});
+
+document.getElementById("cancel-delete").addEventListener("click", () => {
+
+  document.getElementById("modal-delete").classList.add("is-hidden");
+
+  linhaParaExcluir = null;
+});
+
+document.getElementById("confirm-delete").addEventListener("click", () => {
+
+    if (linhaParaExcluir) {
+      linhaParaExcluir.remove();
+    }
+
+    document.getElementById("modal-delete").classList.add("is-hidden");
+
+    linhaParaExcluir = null;
+    atualizarMetricas();
+  });
