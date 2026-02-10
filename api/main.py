@@ -40,7 +40,7 @@ def analyze_text(text: str):
     return status
 
 # ROTA PRINCIPAL (ANALISA EMAIL ESCRITO)
-@app.post("/analyze")
+@app.post("/api/analyze")
 def analyze_email(data: EmailData):
 
     subject = data.subject
@@ -56,7 +56,7 @@ def analyze_email(data: EmailData):
     }
 
 # ROTA QUE ANALISA ARQUIVO DO UPLOAD
-@app.post("/analyze-file")
+@app.post("/api/analyze-file")
 async def analyze_file(file: UploadFile = File(...)):
     file_bytes = await file.read()
     content = ""
@@ -72,7 +72,7 @@ async def analyze_file(file: UploadFile = File(...)):
     return {"subject": file.filename, "sender": "Arquivo Upload", "status": status}
 
 # SUGESTÃO DE RESPOSTA
-@app.post("/suggest-reply")
+@app.post("/api/suggest-reply")
 async def suggest_reply(data: dict):
     content = data.get("content", "")
     category = data.get("category", "")
