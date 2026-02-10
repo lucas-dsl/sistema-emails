@@ -2,9 +2,9 @@
 from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from nlp_utils import preprocess_text
-from ai_service import classify_email
-from ai_service import generate_reply
+from api.nlp_utils import preprocess_text
+from api.ai_service import classify_email
+from api.ai_service import generate_reply
 import PyPDF2
 import io
 
